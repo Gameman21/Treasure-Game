@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Game</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="img/treasure-map.png">
+</head>
+
+<body>
+
+    <div class="screen-container">
+
+        <div class="quests-container">
+
+            <div id="startgame" class="quests show">
+                <h1>Adventure Game</h1>
+                <p>Welcome to the Adventure Game!<br>You are in a standard biome and you will have to make choices to
+                    find your way to kill the enderdragon.<br>Good luck!</p>
+                <div class="button-wrapper">
+                    <button id="start" onclick="startGame()">Start Game</button>
+
+                </div>
+            </div>
+
+            <div id="quest1" class="quests">
+                <h2>Quest 1</h2>
+                <p>You see a tree, do you chop it for wood or leave it?</p>
+                <div class="button-wrapper">
+                    <button onclick="chopTree()">Chop the tree</button>
+                    <button onclick="death()">Leave it</button>
+                </div>
+            </div>
+
+            <div id="treechopped" class="quests">
+                <h2>Quest 2</h2>
+                <p>you now have wood, what do you make?</p>
+                <div class="button-wrapper">
+                    <button onclick="woodenSword()">Wooden Sword</button>
+                    <button onclick="woodenPickaxe()">Wooden Pickaxe</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
