@@ -16,35 +16,149 @@
 
         <div class="quests-container">
 
+            <!-- *Start Game -->
             <div id="startgame" class="quests show">
-                <h1>Adventure Game</h1>
-                <p>Welcome to the Adventure Game!<br>You are in a standard biome and you will have to make choices to
-                    find your way to kill the enderdragon.<br>Good luck!</p>
-                <div class="button-wrapper">
-                    <button id="start" onclick="startGame()">Start Game</button>
-
-                </div>
+                <h1>Treasure Game</h1>
+                <p>In the land of Arkenia, there's a legend of a long-lost treasure hidden deep within the Forest of
+                    Mysteries. Many have tried to find it, but none have succeeded. As the chosen adventurer, you embark
+                    on a quest to uncover this legendary treasure and claim it for yourself.</p>
+                <button id="start" onclick="startGame()">Start Story</button>
             </div>
 
+            <!-- *Main Quest -->
             <div id="quest1" class="quests">
-                <h2>Quest 1</h2>
-                <p>You see a tree, do you chop it for wood or leave it?</p>
+                <h2>Quest 1: The Mysterious Map</h2>
+                <p>You stumble upon an old map in a dusty tavern. It depicts the Forest of Mysteries and hints at the
+                    location of the treasure. What do you do?</p>
                 <div class="button-wrapper">
-                    <button onclick="chopTree()">Chop the tree</button>
-                    <button onclick="death()">Leave it</button>
+                    <button id="studymap" onclick="studyMap()">Study the map closely.</button>
+                    <button id="askorigins" onclick="askOrigins()">Ask the bartender about the map's origins.</button>
+                    <button id="ignoremap" onclick="ignoreMap()">Ignore the map and continue your journey.</button>
                 </div>
             </div>
 
-            <div id="treechopped" class="quests">
-                <h2>Quest 2</h2>
-                <p>you now have wood, what do you make?</p>
+            <!-- *option 1 from main quest -->
+            <div id="studymappath" class="quests">
+                <h2>Quest 2: The Enchanted Statue</h2>
+                <p>Following the map's guidance, you stumble upon a clearing in the forest adorned with an ancient
+                    statue. The statue seems to be pointing towards three different paths, each shrouded in mystery.
+                    What do you do?</p>
                 <div class="button-wrapper">
-                    <button onclick="woodenSword()">Wooden Sword</button>
-                    <button onclick="woodenPickaxe()">Wooden Pickaxe</button>
+                    <button id="followpath" onclick="followpath()">Follow the path indicated by the statue's
+                        outstretched arm.</button>
+                    <button id="otherpath" onclick="otherpath()">Explore one of the other paths to see where it
+                        leads.</button>
+                    <button id="investigatepath" onclick="endmsg()">Investigate the statue for any hidden
+                        compartments or clues.</button>
                 </div>
             </div>
 
+            <!-- *option 1 from studymappath-->
+            <div id="followpathpath" class="quests">
+                <h2>Quest3:The Whispering Grove</h2>
+                <p>Following the path indicated by the statue's outstretched arm, you enter a dense grove where the
+                    trees seem to whisper secrets in the breeze. As you progress deeper into the grove, you notice a
+                    peculiar phenomenon: the trees seem to shift and rearrange themselves, creating a maze-like
+                    labyrinth. How do you navigate through this mystical maze?</p>
+                <div class="button-wrapper">
+                    <button id="trust" onclick="endmsg()">Trust your instincts and follow the path that feels
+                        right.</button>
+                    <button id="mapguide" onclick="endmsg()">Use the map to guide you through the maze.</button>
+                    <button id="comunicate" onclick="endmsg()">Attempt to communicate with the trees to ask for
+                        guidance.</button>
+                </div>
+            </div>
+
+            <!-- *option 2 from studymappath-->
+            <div id="otherpathpath" class="quests">
+                <h2>Quest 3: The Whispering Grove</h2>
+                <p>You decide to explore one of the paths not indicated by the statue. As you venture deeper into the
+                    forest, you find yourself surrounded by a grove of ancient trees. Their branches sway gently in the
+                    breeze, and you hear faint whispers carried on the wind. What do you do?</p>
+                <div class="button-wrapper">
+                    <button id="listen" onclick="endmsg()">Listen closely to the whispers for any clues or
+                        warnings.</button>
+                    <button id="pressthrough" onclick="endmsg()">Press on through the grove, trusting your
+                        instincts to guide you.</button>
+                    <button id="retreatfrom" onclick="endmsg()">Retreat from the grove and return to the clearing
+                        with the statue.</button>
+                </div>
+            </div>
+
+            <!-- *option 3 from studymappath -->
+            <div id="investigatepathpath" class="quests">
+            <h2>Quest 3: Uncovering Secrets</h2>
+            <p>You approach the ancient statue, examining it closely for any hidden compartments or clues. After a
+                thorough search, your fingers brush against a small crevice near the statue's base. With a gentle push,
+                a hidden compartment opens, revealing a worn scroll inside.
+
+                As you unroll the scroll, you find a series of cryptic symbols and markings. It appears to be a set of
+                instructions leading to a hidden chamber deeper within the forest. What do you do next?</p>
+            <div class="button-wrapper">
+                <button id="follow" onclick="endmsg()">Follow the instructions on the scroll to locate the hidden
+                    chamber.</button>
+                <button id="take" onclick="endmsg()">Take the scroll with you and continue exploring the forest for more
+                    clues.</button>
+                <button id="leave" onclick="endmsg()">Leave the statue and explore a different area of the
+                    forest.</button>
+            </div>
         </div>
+
+        <!-- *option 2 from main quest -->
+        <div id="askoriginspath" class="quests">
+            <h2>Quest 2: The Forest's Secrets</h2>
+            <p>As you venture into the Forest of Mysteries, the dense canopy overhead casts shadows that seem to dance
+                in the dim light filtering through the leaves. The air is thick with the sounds of unseen creatures, and
+                the path ahead is shrouded in uncertainty. You press on, guided by the map's cryptic directions. Soon,
+                you come upon a fork in the road. Each path
+                disappears into the thick undergrowth, leaving you to wonder which way holds the key to unlocking the
+                treasure's location.</p>
+            <div class="button-wrapper">
+                <button id="narrowpath" onclick="narrowpath()">The narrow path to the left..</button>
+                <button id="overgrownpath" onclick="overgrownpath()">The overgrown path to the right.</button>
+                <button id="turnback" onclick="endmsg()">Turn back and search for another route.</button>
+            </div>
+        </div>
+
+        <!-- *option 1 from askorgins-->
+        <div id="narrowpathpath" class="quests">
+            <h2>Quest 3: The Hidden Path</h2>
+            <p>You opt to take the narrow path to the left, hoping it will lead you deeper into the heart of the forest
+                where the treasure awaits. As you traverse the winding trail, the trees seem to press in closer, their
+                gnarled branches reaching out as if to block your path. After what feels like hours of navigating
+                through the dense foliage, you stumble upon a clearing. At its
+                center stands an ancient stone pedestal, upon which rests a weathered tome. Could this be a clue left by
+                Old Willem himself?</p>
+            <div class="button-wrapper">
+                <button id="approach" onclick="endmsg()">Approach the pedestal and examine the tome.</button>
+                <button id="investigate" onclick="endmsg()">Investigate the surrounding area for any other
+                    clues.</button>
+                <button id="proceed" onclick="endmsg()">Proceed cautiously, keeping your guard up for any potential
+                    traps or dangers.</button>
+            </div>
+        </div>
+
+        <!-- *option 2 from askorigins -->
+        <div id="overgrownpathpath" class="quests">
+            <h2>Quest 3: The Overgrown Path</h2>
+            <p>You forge ahead along the overgrown path, pushing through tangled vines and ducking beneath low-hanging
+                branches. The air grows thick with humidity, and the sounds of the forest seem to echo with a sense of hidden danger.
+                As you navigate deeper into the heart of the forest, you stumble upon a clearing bathed in dappled
+                sunlight. At its center stands a weathered stone pedestal, upon which rests a small, ornate chest.
+                However, the chest is surrounded by a circle of shimmering runes, pulsing with an otherworldly energy.
+            </p>
+            <div class="button-wrapper">
+                <button id="cautiously" onclick="endmsg()">Approach the chest cautiously, wary of the runes' magic.</button>
+                <button id="search" onclick="endmsg()">Search the perimeter of the clearing for clues about the runes' significance.</button>
+                <button id="retreatforrest" onclick="endmsg()">Retreat from the clearing and seek an alternative route through the forest.</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="save">
+        <button>Save Game</button>
+    </div>
 
     </div>
 

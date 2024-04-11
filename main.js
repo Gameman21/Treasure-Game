@@ -1,13 +1,26 @@
 //quest vars
 var elementHome = document.getElementById("startgame");
 var elementQuest1 = document.getElementById("quest1");
-var elementTreeChopped = document.getElementById("treechopped");
+var elementEndMSG = document.getElementById("endmsg");
+
+// quest 1
+var elementStudyMapPath = document.getElementById("studymappath");
+var elementAskOriginsPath = document.getElementById("askoriginspath");
+var elementIgnoreMapPath = document.getElementById("investigatepathpath");
+
+//study map path
+var elementFollowPathPath = document.getElementById("followpathpath");
+var elementOtherPathPath = document.getElementById("otherpathpath");
+var elementInvestigatePathPath = document.getElementById("investigatepathpath");
+
+//ask origins path
+var elementNarrowPathPath = document.getElementById("narrowpathpath");
+var elementOvergrownPathPath = document.getElementById("overgrownpathpath");
 
 
 //quest death
-function death() {
-    alert("Wrong answer, this will not make u succeed your quests.");
-    window.location.reload();
+function endmsg() {
+    window.location.href = "endmsg.html";
 }
 
 //start
@@ -17,19 +30,46 @@ function startGame(){
 }
 
 //quest 1
-function chopTree() {
+function studyMap() {
+    elementStudyMapPath.classList.toggle("show") //show
     elementQuest1.classList.toggle("show") //hide
-    elementTreeChopped.classList.toggle("show") //show
 }
 
-function leaveTree() {
+function askOrigins() {
     elementQuest1.classList.toggle("show") //hide
-    elementTreeChopped.classList.toggle("show") //show
+    elementAskOriginsPath.classList.toggle("show") //show
 }
 
-//quest 2
+function ignoreMap() {
+    elementQuest1.classList.toggle("show") //hide
+    elementIgnoreMapPath.classList.toggle("show") //show
+}
 
-function woodenSword() {
-    elementwoodensword.classList.toggle("show") //show
-    elementTreeChopped.classList.toggle("show") //hide
+// Study Map Path
+
+function followpath() {
+    elementStudyMapPath.classList.toggle("show") //hide
+    elementFollowPathPath.classList.toggle("show") //show
+}
+
+function otherpath() {
+    elementStudyMapPath.classList.toggle("show") //hide
+    elementOtherPathPath.classList.toggle("show") //show
+}
+
+function investigatepath() {
+    elementStudyMapPath.classList.toggle("show") //hide
+    elementInvestigatePathPath.classList.toggle("show") //show
+}
+
+// ask origins path
+
+function narrowpath() {
+    elementAskOriginsPath.classList.toggle("show") //hide
+    elementNarrowPathPath.classList.toggle("show") //show
+}
+
+function overgrownpath() {
+    elementAskOriginsPath.classList.toggle("show") //hide
+    elementOvergrownPathPath.classList.toggle("show") //show
 }
